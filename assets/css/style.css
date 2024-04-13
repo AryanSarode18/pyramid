@@ -527,6 +527,11 @@ body {
   border-bottom-right-radius: 90px;
 }
 
+.hero .container .hero-content .buttons_container {
+  display: flex;
+  gap: 3rem;
+}
+
 
 
 
@@ -681,37 +686,55 @@ body {
 
 
 /*-----------------------------------*\
-  #COURSE
+  #BATCHES
 \*-----------------------------------*/
 
-.course {
+.batches {
   background-color: var(--isabelline);
 }
 
-.course-card {
+.batch-card {
   position: relative;
   background-color: var(--white);
   border-radius: var(--radius-5);
   overflow: hidden;
 }
 
-.course-card .img-cover {
-  transition: var(--transition-2);
+.batches .section-subtitle {
+  color: var(--radical-red);
 }
 
-.course-card:is(:hover, :focus-within) .img-cover {
+.batches .section-title {
+  --color: var(--kappel);
+  padding-bottom: 3rem;
+}
+
+.batches .container .grid-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.batches .container .grid-list .first,
+.batches .container .grid-list .second {
+  display: flex;
+  gap: 30px;
+}
+
+.batch-card .img-cover {
+  transition: var(--transition-2);
+  object-fit: contain;
+}
+
+.batch-card:is(:hover, :focus-within) .img-cover {
   transform: scale(1.1);
 }
 
-.course-card :is(.abs-badge, .badge) {
+.batch-card :is(.abs-badge, .badge) {
   font-family: var(--ff-league_spartan);
   border-radius: var(--radius-3);
 }
 
-.course-card .abs-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+.batch-card .abs-badge {
   background-color: var(--selective-yellow);
   color: var(--white);
   display: flex;
@@ -722,97 +745,30 @@ body {
   padding-block-end: 3px;
 }
 
-.course-card .abs-badge ion-icon {
-  font-size: 18px;
-  margin-block-end: 5px;
-  --ionicon-stroke-width: 50px;
+.batch-card .abs-badge .span {
+  margin: auto;
 }
 
-.course-card .card-content {
+.batches .batch-card .abs-badge hr {
+  width: -webkit-fill-available;
+  color: #fff;
+  display: none;
+}
+
+.batch-card .card-content {
   padding: 25px;
 }
 
-.course-card .badge {
+.batches .second:last-child .abs-badge span:last-child {
+  display: none;
+}
+
+.batch-card .badge {
   background-color: var(--kappel_15);
   max-width: max-content;
   color: var(--kappel);
   line-height: 25px;
   padding-inline: 10px;
-}
-
-.course-card .card-title {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  margin-block: 15px 8px;
-  transition: var(--transition-1);
-}
-
-.course-card .card-title:is(:hover, :focus) {
-  color: var(--kappel);
-}
-
-.course-card :is(.wrapper, .rating-wrapper, .card-meta-list, .card-meta-item) {
-  display: flex;
-  align-items: center;
-}
-
-.course-card .wrapper {
-  gap: 10px;
-}
-
-.course-card .rating-wrapper {
-  gap: 3px;
-}
-
-.course-card .rating-wrapper ion-icon {
-  color: var(--selective-yellow);
-}
-
-.course-card .rating-text {
-  color: var(--eerie-black-1);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-500);
-}
-
-.course-card .price {
-  color: var(--radical-red);
-  font-family: var(--ff-league_spartan);
-  font-size: var(--fs-4);
-  font-weight: var(--fw-600);
-  margin-block: 8px 15px;
-}
-
-.course-card .card-meta-list {
-  flex-wrap: wrap;
-}
-
-.course-card .card-meta-item {
-  position: relative;
-  gap: 5px;
-}
-
-.course-card .card-meta-item:not(:last-child)::after {
-  content: "|";
-  display: inline-block;
-  color: var(--platinum);
-  padding-inline: 10px;
-}
-
-.course-card .card-meta-item ion-icon {
-  color: var(--quick-silver);
-  --ionicon-stroke-width: 50px;
-}
-
-.course-card .card-meta-item .span {
-  color: var(--eerie-black-1);
-  font-size: var(--fs-7);
-}
-
-.course .btn {
-  margin-inline: auto;
-  margin-block-start: 60px;
 }
 
 
@@ -1127,9 +1083,30 @@ body {
   #MEDIA QUERIES
 \*-----------------------------------*/
 
-/**
- * responsive for large than 575px screen
+/*
+  responsive for large than 575px screen
  */
+
+@media (max-width: 980px) {
+
+  .batches .container .grid-list .first,
+  .batches .container .grid-list .second {
+    flex-direction: column;
+  }
+
+  .batches .batch-card .abs-badge {
+    flex-direction: column;
+  }
+
+  .batches .batch-card .abs-badge hr {
+    width: -webkit-fill-available;
+    display: flex;
+  }
+
+  .batches .batch-card:last-child .abs-badge span:last-child {
+    display: flex;
+  }
+}
 
 @media (min-width: 575px) {
 
