@@ -470,8 +470,6 @@ body {
 }
 
 .header .container .logo {
-  width: 200px;
-  height: 50px;
   display: flex;
 }
 
@@ -550,6 +548,10 @@ body {
 
 .branches .section-text {
   margin-block-end: 40px;
+}
+
+.branches .grid-list .branches-card .h3 {
+  padding-bottom: 20px;
 }
 
 .branches-card {
@@ -679,6 +681,10 @@ body {
 .about-item .span {
   color: var(--eerie-black-1);
   font-family: var(--ff-league_spartan);
+}
+
+.about .container .about-content .h2 span {
+  display: contents;
 }
 
 
@@ -1307,7 +1313,11 @@ body {
    */
 
   .about {
-    padding-block-start: 50px;
+    padding-block-start: 120px;
+  }
+
+  .about .section-subtitle {
+    color: var(--radical-red);
   }
 
   .about-banner {
