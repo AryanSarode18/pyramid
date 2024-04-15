@@ -965,6 +965,7 @@ body {
 .footer-top {
   display: grid;
   gap: 30px;
+  padding-bottom: 0px;
 }
 
 .footer-brand-text {
@@ -998,22 +999,6 @@ body {
 
 .footer-list .footer-link {
   padding-block: 5px;
-}
-
-.newsletter-form {
-  margin-block: 20px 35px;
-}
-
-.newsletter-form .input-field {
-  background-color: var(--white);
-  padding: 12px;
-  border-radius: var(--radius-5);
-  margin-block-end: 20px;
-}
-
-.newsletter-form .btn {
-  min-width: 100%;
-  justify-content: center;
 }
 
 .social-list {
@@ -1102,6 +1087,17 @@ body {
 }
 
 
+@media (max-width: 575px) {
+  .footer .grid-list{
+    text-align: center;
+  }
+
+  .footer .logo {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 
 /*
   responsive for large than 575px screen
@@ -1175,6 +1171,11 @@ body {
   .footer .logo {
     display: flex;
     justify-content: center;
+
+  }
+
+  .footer .grid-list{
+    text-align: center;
   }
 
   .newsletter-form {
