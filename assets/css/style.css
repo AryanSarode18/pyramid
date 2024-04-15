@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2024 Aryan Sarode
+ * copyright 2024 Aryan and pranav
  */
 
 
@@ -782,33 +782,22 @@ body {
 
 
 /*-----------------------------------*\
-  #VIDEO
+  #RESULT
 \*-----------------------------------*/
 
-.video {
+.result {
   background-size: contain;
   background-position: center top;
 }
 
-.video-banner {
+.result-banner {
   position: relative;
   border-top-right-radius: 80px;
   border-bottom-left-radius: 120px;
 }
 
-.video .play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: var(--radical-red);
-  font-size: 30px;
-  padding: 16px;
-  color: var(--white);
-  border-radius: var(--radius-circle);
-  box-shadow: 0 0 0 0 var(--white_50);
-  z-index: 1;
-  animation: pulse 3s ease infinite;
+.result .section-subtitle {
+  color: var(--radical-red);
 }
 
 @keyframes pulse {
@@ -821,7 +810,7 @@ body {
   }
 }
 
-.video-banner::after {
+.result-banner::after {
   inset: 0;
   background-color: var(--black_30);
 }
@@ -1030,6 +1019,7 @@ body {
 .social-list {
   display: flex;
   gap: 25px;
+  justify-content: center;
 }
 
 .social-link {
@@ -1089,9 +1079,6 @@ body {
   #MEDIA QUERIES
 \*-----------------------------------*/
 
-/*
-  responsive for large than 575px screen
- */
 
 @media (max-width: 980px) {
 
@@ -1113,6 +1100,12 @@ body {
     display: flex;
   }
 }
+
+
+
+/*
+  responsive for large than 575px screen
+*/
 
 @media (min-width: 575px) {
 
@@ -1159,17 +1152,6 @@ body {
   }
 
 
-
-  /**
-   * VIDEO
-   */
-
-  .video .play-btn {
-    padding: 25px;
-  }
-
-
-
   /**
    * STATS
    */
@@ -1187,6 +1169,12 @@ body {
   .footer-brand,
   .footer-list:last-child {
     grid-column: 1 / 3;
+    text-align: center;
+  }
+
+  .footer .logo {
+    display: flex;
+    justify-content: center;
   }
 
   .newsletter-form {
@@ -1431,23 +1419,14 @@ body {
 
 
   /**
-   * VIDEO
+   * result
    */
 
-  .video-banner {
+  .result-banner {
     max-width: 75%;
     margin-inline: auto;
   }
 
-
-
-  /**
-   * FOOTER
-   */
-
-  .footer .grid-list {
-    grid-template-columns: 1fr 0.6fr 0.6fr 1.2fr;
-  }
 
 }
 
@@ -1496,7 +1475,7 @@ body {
   }
 
   .about-content,
-  .video-card,
+  .result-card,
   .blog {
     position: relative;
   }
@@ -1604,15 +1583,15 @@ body {
 
 
   /**
-   * VIDEO
+   * result
    */
 
-  .video-shape-1 {
+  .result-shape-1 {
     top: -50px;
     left: 0;
   }
 
-  .video-shape-2 {
+  .result-shape-2 {
     top: -80px;
     right: 120px;
     z-index: 1;
