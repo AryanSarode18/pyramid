@@ -718,6 +718,7 @@ body {
 .batches .container .grid-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .batches .container .grid-list .first,
@@ -968,6 +969,12 @@ body {
   padding-bottom: 0px;
 }
 
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .footer-brand-text {
   margin-block: 20px;
 }
@@ -1098,6 +1105,15 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .stats-card .card-title {
+    font-size: 2.5rem;
+    height: 49.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 /*
   responsive for large than 575px screen
@@ -1325,8 +1341,6 @@ body {
     right: -70px;
   }
 
-
-
   /**
    * FOOTER
    */
@@ -1515,7 +1529,7 @@ body {
 
   .navbar-list {
     display: flex;
-    gap: 50px;
+    gap: 38px;
     padding: 0;
   }
 
