@@ -1453,54 +1453,7 @@ body {
  * responsive for large than 1200px screen
  */
 
-@media (min-width: 1200px) {
-
-  /**
-   * CUSTOM PROPERTY
-   */
-
-  :root {
-
-    /**
-     * typography
-     */
-
-    --fs-1: 6.5rem;
-
-    /**
-     * spacing
-     */
-
-    --section-padding: 120px;
-
-  }
-
-
-
-  /**
-   * REUSED STYLE
-   */
-
-  .container {
-    max-width: 1185px;
-  }
-
-  .shape {
-    display: block;
-  }
-
-  .about-content,
-  .result-card,
-  .blog {
-    position: relative;
-  }
-
-
-
-  /**
-   * HEADER
-   */
-
+@media (min-width: 1050px) {
   .header-action-btn:last-child,
   .navbar .wrapper,
   .overlay {
@@ -1545,8 +1498,49 @@ body {
   .header .btn {
     margin-inline-end: 0;
   }
+}
+
+@media (min-width: 1200px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-1: 6.5rem;
+
+    /**
+     * spacing
+     */
+
+    --section-padding: 120px;
+
+  }
 
 
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 1185px;
+  }
+
+  .shape {
+    display: block;
+  }
+
+  .about-content,
+  .result-card,
+  .blog {
+    position: relative;
+  }
 
   /**
    * HERO
