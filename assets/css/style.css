@@ -704,6 +704,7 @@ body {
   background-color: var(--white);
   border-radius: var(--radius-5);
   overflow: hidden;
+  max-width: 360px;
 }
 
 .batches .section-subtitle {
@@ -745,37 +746,22 @@ body {
   background-color: var(--selective-yellow);
   color: var(--white);
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 5px;
   line-height: 1;
   padding: 6px 8px;
   padding-block-end: 3px;
+  justify-content: center;
 }
 
-.batch-card .abs-badge .span {
-  margin: auto;
-}
-
-.batches .batch-card .abs-badge hr {
-  width: -webkit-fill-available;
-  color: #fff;
-  display: none;
-}
-
-.batch-card .card-content {
-  padding: 25px;
+.batch-card .abs-badge hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #fff;
 }
 
 .batches .second:last-child .abs-badge span:last-child {
-  display: none;
-}
-
-.batch-card .badge {
-  background-color: var(--kappel_15);
-  max-width: max-content;
-  color: var(--kappel);
-  line-height: 25px;
-  padding-inline: 10px;
+  display: block;
 }
 
 
@@ -1072,7 +1058,7 @@ body {
 \*-----------------------------------*/
 
 
-@media (max-width: 980px) {
+@media (max-width: 992px) {
 
   .batches .container .grid-list .first,
   .batches .container .grid-list .second {
@@ -1090,6 +1076,10 @@ body {
 
   .batches .batch-card:last-child .abs-badge span:last-child {
     display: flex;
+  }
+
+  .batch-card {
+    max-width: fit-content;
   }
 }
 
