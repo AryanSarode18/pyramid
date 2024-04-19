@@ -781,6 +781,24 @@ body {
   position: relative;
   border-top-right-radius: 80px;
   border-bottom-left-radius: 120px;
+  display: flex;
+}
+
+.slide-slider {
+  display: flex;
+  align-items: center;
+  
+}
+
+.result .slide-btn:hover {
+  cursor: pointer;
+  inset: 0;
+  background-image: var(--gradient);
+  transition: var(--transition-2);
+}
+
+.result .slide-btn {            
+  height: fit-content;
 }
 
 .result .section-subtitle {
@@ -795,11 +813,6 @@ body {
   100% {
     box-shadow: 0 0 0 20px transparent;
   }
-}
-
-.result-banner::after {
-  inset: 0;
-  background-color: var(--black_30);
 }
 
 
