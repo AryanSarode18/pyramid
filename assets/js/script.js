@@ -1,7 +1,3 @@
-'use strict';
-
-
-
 /**
  * add event on element
  */
@@ -61,3 +57,37 @@ const activeElem = function () {
 }
 
 addEventOnElem(window, "scroll", activeElem);
+
+
+
+
+
+
+
+var currentImageIndex = 1; // Start from 1 since result1.jpg is the initial image
+    var totalImages = 3; // Total number of images
+    var imagePath = "assets/images/result"; // Path to images (excluding the index and extension)
+
+    function showImage() {
+        var image = document.getElementById("slider-image");
+        image.src = imagePath + currentImageIndex + ".jpg";
+    }
+
+    function nextImage() {
+        currentImageIndex++;
+        if (currentImageIndex > totalImages) {
+            currentImageIndex = 1; // Start from the first image if reached the end
+        }
+        showImage();
+    }
+
+    function prevImage() {
+        currentImageIndex--;
+        if (currentImageIndex < 1) {
+            currentImageIndex = totalImages; // Go to the last image if reached the beginning
+        }
+        showImage();
+    }
+
+    // Show the initial image
+    showImage();
