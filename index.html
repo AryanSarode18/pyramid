@@ -16,9 +16,8 @@
     <!-- 
     - favicon
   -->
-    <a>
-        <link rel="shortcut icon" href="./favicon.jpg" type="image/svg+xml">
-    </a>
+
+    <link rel="shortcut icon" href="./favicon.jpg" type="image/svg+xml">
 
     <!-- 
     - custom css link
@@ -57,7 +56,7 @@
     <header class="header" data-header>
         <div class="container">
 
-            <a  class="logo">
+            <a class="logo">
                 <img src="./assets/images/logo.jpg">
             </a>
 
@@ -76,7 +75,15 @@
                 <ul class="navbar-list">
 
                     <li class="navbar-item">
+                        <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+
+                    <li class="navbar-item">
                         <a href="#about" class="navbar-link" data-nav-link>About</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#result" class="navbar-link" data-nav-link>Result</a>
                     </li>
 
                     <li class="navbar-item">
@@ -85,14 +92,6 @@
 
                     <li class="navbar-item">
                         <a href="#batches" class="navbar-link" data-nav-link>Grades</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="#result" class="navbar-link" data-nav-link>Result</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="" class="navbar-link" data-nav-link>What Makes Us Different ?</a>
                     </li>
 
 
@@ -217,7 +216,8 @@
                         <p class="section-subtitle">About Us</p>
 
                         <h2 class="h2 section-title">
-                            Over 10 Years in the field of <span class="span">Academy teaching</span> for skill
+                            Over 10 Years in the field of <span class="span heading-span">Academy teaching</span> for
+                            skill
                             development
                         </h2>
 
@@ -251,20 +251,17 @@
                     <p class="section-subtitle">Results</p>
 
                     <div class="result-card">
-
-                        <div class="slide-slider">
-                            <a class="btn slide-btn"><i class="fas fa-arrow-left"></i></a>
-                            <div class="result-banner img-holder has-after" style="--width: ; --height: ;">
-                                <img src="./assets/images/result1.jpg" width="970" height="550" loading="lazy" alt="result banner" class="img-cover">
+                        <div class="image-slider">
+                            <img src="assets/images/result1.jpg" alt="Image 1" id="slider-image">
+                            <div class="slider-btns">
+                                <button class="slide-btn prev-btn" onclick="prevImage()"><i
+                                        class="fas fa-arrow-left"></i></button>
+                                <button class="slide-btn next-btn" onclick="nextImage()"><i
+                                        class="fas fa-arrow-right"></i></button>
                             </div>
-                            <a class="btn slide-btn"><i class="fas fa-arrow-right"></i></a>
+                            </img>
+
                         </div>
-
-                        <img src="./assets/images/video-shape-1.png" width="1089" height="605" loading="lazy" alt=""
-                            class="shape result-shape-1">
-
-                        <img src="./assets/images/video-shape-2.png" width="158" height="174" loading="lazy" alt=""
-                            class="shape result-shape-2">
 
                     </div>
 
@@ -286,7 +283,7 @@
                     <p class="section-subtitle">Branches</p>
 
                     <h2 class="h2 section-title">
-                        Offline <span class="span">Classes</span> For Practical Learning.
+                        <span class="span heading-span"> Offline Classes</span> For Practical Learning.
                     </h2>
 
                     <p class="section-text">
@@ -341,8 +338,12 @@
                 </div>
             </section>
 
+
+
+
+
             <!-- 
-        - #BATCHES
+        - #GRADES
       -->
 
             <section class="section batches" id="batches" aria-label="batches">
@@ -350,8 +351,9 @@
 
                     <p class="section-subtitle">Grades Taught</p>
 
-                    <h2 class="h2 section-title">Taught With <span class="span">Passion</span> To these <span
-                            class="span">Grades</span></h2>
+                    <h2 class="h2 section-title">Taught With <span class="span heading-span">Passion</span> To these
+                        <span class="span heading-span">Grades</span>
+                    </h2>
 
                     <ul class="grid-list">
 
@@ -540,163 +542,6 @@
 
 
 
-
-            <!-- 
-        - #BLOG
-      -->
-
-            <!-- <section class="section blog has-bg-image" id="blog" aria-label="blog"
-                style="background-image: url('./assets/images/blog-bg.svg')">
-                <div class="container">
-
-                    <p class="section-subtitle">Latest Articles</p>
-
-                    <h2 class="h2 section-title">Get News With Eduweb</h2>
-
-                    <ul class="grid-list">
-
-                        <li>
-                            <div class="blog-card">
-
-                                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                                    <img src="./assets/images/blog-1.jpg" width="370" height="370" loading="lazy"
-                                        alt="Become A Better Blogger: Content Planning" class="img-cover">
-                                </figure>
-
-                                <div class="card-content">
-
-                                    <a href="#" class="card-btn" aria-label="read more">
-                                        <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                                    </a>
-
-                                    <a href="#" class="card-subtitle">Online</a>
-
-                                    <h3 class="h3">
-                                        <a href="#" class="card-title">Become A Better Blogger: Content Planning</a>
-                                    </h3>
-
-                                    <ul class="card-meta-list">
-
-                                        <li class="card-meta-item">
-                                            <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">Oct 10, 2021</span>
-                                        </li>
-
-                                        <li class="card-meta-item">
-                                            <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">Com 09</span>
-                                        </li>
-
-                                    </ul>
-
-                                    <p class="card-text">
-                                        Lorem Ipsum Dolor Sit Amet Cons Tetur Adipisicing Sed.
-                                    </p>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="blog-card">
-
-                                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                                    <img src="./assets/images/blog-2.jpg" width="370" height="370" loading="lazy"
-                                        alt="Become A Better Blogger: Content Planning" class="img-cover">
-                                </figure>
-
-                                <div class="card-content">
-
-                                    <a href="#" class="card-btn" aria-label="read more">
-                                        <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                                    </a>
-
-                                    <a href="#" class="card-subtitle">Online</a>
-
-                                    <h3 class="h3">
-                                        <a href="#" class="card-title">Become A Better Blogger: Content Planning</a>
-                                    </h3>
-
-                                    <ul class="card-meta-list">
-
-                                        <li class="card-meta-item">
-                                            <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">Oct 10, 2021</span>
-                                        </li>
-
-                                        <li class="card-meta-item">
-                                            <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">Com 09</span>
-                                        </li>
-
-                                    </ul>
-
-                                    <p class="card-text">
-                                        Lorem Ipsum Dolor Sit Amet Cons Tetur Adipisicing Sed.
-                                    </p>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="blog-card">
-
-                                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                                    <img src="./assets/images/blog-3.jpg" width="370" height="370" loading="lazy"
-                                        alt="Become A Better Blogger: Content Planning" class="img-cover">
-                                </figure>
-
-                                <div class="card-content">
-
-                                    <a href="#" class="card-btn" aria-label="read more">
-                                        <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                                    </a>
-
-                                    <a href="#" class="card-subtitle">Online</a>
-
-                                    <h3 class="h3">
-                                        <a href="#" class="card-title">Become A Better Blogger: Content Planning</a>
-                                    </h3>
-
-                                    <ul class="card-meta-list">
-
-                                        <li class="card-meta-item">
-                                            <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">Oct 10, 2021</span>
-                                        </li>
-
-                                        <li class="card-meta-item">
-                                            <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">Com 09</span>
-                                        </li>
-
-                                    </ul>
-
-                                    <p class="card-text">
-                                        Lorem Ipsum Dolor Sit Amet Cons Tetur Adipisicing Sed.
-                                    </p>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                    </ul>
-
-                    <img src="./assets/images/blog-shape.png" width="186" height="186" loading="lazy" alt=""
-                        class="shape blog-shape">
-
-                </div>
-            </section> -->
 
         </article>
     </main>
