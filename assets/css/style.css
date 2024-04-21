@@ -500,6 +500,10 @@ body {
   width: max-content;
 }
 
+.hero .img-cover {
+  object-fit: contain;
+}
+
 .hero .container {
   display: grid;
   gap: 40px;
@@ -685,79 +689,6 @@ body {
 
 .about .container .about-content .h2 span {
   display: contents;
-}
-
-
-
-
-
-/*-----------------------------------*\
-  #BATCHES
-\*-----------------------------------*/
-
-.batches {
-  background-color: var(--isabelline);
-}
-
-.batch-card {
-  position: relative;
-  background-color: var(--white);
-  border-radius: var(--radius-5);
-  overflow: hidden;
-  max-width: 360px;
-}
-
-.batches .section-title {
-  --color: var(--kappel);
-  padding-bottom: 3rem;
-}
-
-.batches .container .grid-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.batches .container .grid-list .first,
-.batches .container .grid-list .second {
-  display: flex;
-  gap: 30px;
-}
-
-.batch-card .img-cover {
-  transition: var(--transition-2);
-  object-fit: contain;
-}
-
-.batch-card:is(:hover, :focus-within) .img-cover {
-  transform: scale(1.1);
-}
-
-.batch-card :is(.abs-badge, .badge) {
-  font-family: var(--ff-league_spartan);
-  border-radius: var(--radius-3);
-}
-
-.batch-card .abs-badge {
-  background-color: var(--selective-yellow);
-  color: var(--white);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  line-height: 1;
-  padding: 6px 8px;
-  padding-block-end: 3px;
-  justify-content: center;
-}
-
-.batch-card .abs-badge hr {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #fff;
-}
-
-.batches .second:last-child .abs-badge span:last-child {
-  display: block;
 }
 
 
@@ -973,28 +904,9 @@ body {
 \*-----------------------------------*/
 
 
-@media (max-width: 992px) {
-
-  .batches .container .grid-list .first,
-  .batches .container .grid-list .second {
-    flex-direction: column;
-  }
-
-  .batches .batch-card .abs-badge {
-    flex-direction: column;
-  }
-
-  .batches .batch-card .abs-badge hr {
-    width: -webkit-fill-available;
-    display: flex;
-  }
-
-  .batches .batch-card:last-child .abs-badge span:last-child {
-    display: flex;
-  }
-
-  .batch-card {
-    max-width: fit-content;
+@media (max-width: 1030px) {
+  .hero-shape-1 {
+    left: 15px;
   }
 }
 
@@ -1017,6 +929,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .hero .hero-banner {
+      display: flex;
+      justify-content: center;
+  }
+
+  .hero .hero-shape-1 {
+    display: none;
+  }
+
+  .hero .hero-banner .img-holder {
+      width: max-content;
   }
 }
 
@@ -1197,12 +1122,10 @@ body {
   }
 
   .hero-shape-1 {
-    display: block;
+    bottom: 40px;
+    left: 330px;
     position: absolute;
-    bottom: -40px;
-    left: -10px;
   }
-
 
 
   /**
@@ -1226,7 +1149,7 @@ body {
   .about-shape-1 {
     display: block;
     top: -40px;
-    right: -70px;
+    right: -110px;
   }
 
   /**
@@ -1249,10 +1172,10 @@ body {
 
 
 /**
- * responsive for large than 992px screen
+ * responsive for large than 1030px screen
  */
 
-@media (min-width: 992px) {
+@media (min-width: 1030px) {
 
   /**
    * CUSTOM PROPERTY
@@ -1307,6 +1230,11 @@ body {
     margin-inline: 0;
   }
 
+  .hero-shape-1 {
+    bottom: 40px;
+    left: 200px;
+    position: absolute;
+  }
 
 
   /**
@@ -1421,10 +1349,6 @@ body {
     max-width: 1185px;
   }
 
-  .shape {
-    display: block;
-  }
-
   .about-content,
   .result-card,
   .Different {
@@ -1446,6 +1370,12 @@ body {
   .hero-shape-2 {
     top: -80px;
     z-index: -1;
+  }
+
+  .hero-shape-1 {
+    position: absolute;
+    bottom: -200px;
+    left: -65px;
   }
 
 
