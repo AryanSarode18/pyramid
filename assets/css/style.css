@@ -646,8 +646,8 @@ body {
 
 .about-shape-2 {
   display: block;
-  bottom: -100px;
-  left: -60px;
+  bottom: -170px;
+  left: -130px;
   animation: bounce 2.5s infinite;
 }
 
@@ -908,6 +908,11 @@ body {
   .hero-shape-1 {
     left: 15px;
   }
+
+  .about .about-content .section-subtitle {
+    justify-content: center;
+    display: flex;
+  }
 }
 
 
@@ -932,8 +937,8 @@ body {
   }
 
   .hero .hero-banner {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
   }
 
   .hero .hero-shape-1 {
@@ -941,7 +946,11 @@ body {
   }
 
   .hero .hero-banner .img-holder {
-      width: max-content;
+    width: max-content;
+  }
+
+  .about .about-banner .about-shape-2 {
+    display: none;
   }
 }
 
@@ -1148,8 +1157,9 @@ body {
 
   .about-shape-1 {
     display: block;
-    top: -40px;
-    right: -110px;
+    top: -100px;
+    right: -150px;
+    animation: bounce 2.5s infinite;
   }
 
   /**
