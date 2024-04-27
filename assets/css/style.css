@@ -339,11 +339,6 @@ body {
   background-color: hsla(var(--color), 0.1);
 }
 
-:is(.course, .blog) .section-title {
-  margin-block-end: 40px;
-}
-
-
 
 
 
@@ -691,6 +686,37 @@ body {
   display: contents;
 }
 
+.about .grades {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.about .grades .grade-card {
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px !important;
+  justify-content: center;
+}
+
+.about .grades .grade-card:nth-child(2) {
+  background-color: #2028c9;
+}
+
+.about .grades .grade-card:nth-child(2) .card-title {
+  color: #fff !important;
+}
+
+.about .grades .grade-card .card-title {
+  color: #2028c9;
+}
+
+.about .grades .grade-card .card-text {
+  color: red;
+  font-size: var(--fs-3);
+}
+
 
 
 
@@ -777,8 +803,6 @@ body {
   color: var(--eerie-black-1);
   text-transform: uppercase;
 }
-
-
 
 
 
@@ -913,6 +937,14 @@ body {
     justify-content: center;
     display: flex;
   }
+
+   .about .grades .grade-card .card-title {
+    font-size: 3rem;
+  }
+
+   .about .grades .grade-card .card-text {
+    font-size: var(--fs-4);
+  }
 }
 
 
@@ -925,6 +957,11 @@ body {
     display: flex;
     justify-content: center;
   }
+
+  .about .grades {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 768px) {
@@ -934,6 +971,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .about .grades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about .grades .grade-card {
+    margin-bottom: 2rem;
+    width: 280px;
+  }
+
+  .about .grades .grade-card .card-title {
+    font-size: 3.8rem;
   }
 
   .hero .hero-banner {
@@ -973,12 +1025,6 @@ body {
   .grid-list {
     grid-template-columns: 1fr 1fr;
   }
-
-  :is(.course, .blog) .grid-list {
-    grid-template-columns: 1fr;
-  }
-
-
 
   /**
    * HEADER
@@ -1073,10 +1119,6 @@ body {
 
   .btn {
     padding: 15px 30px;
-  }
-
-  :is(.course, .blog) .grid-list {
-    grid-template-columns: 1fr 1fr;
   }
 
 
@@ -1216,10 +1258,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  :is(.course, .blog) .grid-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
 
 
   /**
@@ -1252,12 +1290,8 @@ body {
    */
 
   .about .container {
-    grid-template-columns: 1fr 0.6fr;
     align-items: center;
-    gap: 60px;
   }
-
-
 
   /**
    * result
@@ -1324,6 +1358,12 @@ body {
 
   .header .btn {
     margin-inline-end: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about .about-main .about-banner {
+    margin-bottom: 4rem;
   }
 }
 
@@ -1394,8 +1434,9 @@ body {
    * ABOUT
    */
 
-  .about .container {
+  .about .container .about-main {
     gap: 110px;
+    display: flex;
   }
 
   .about-banner .img-holder {
