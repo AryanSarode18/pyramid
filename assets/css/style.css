@@ -692,7 +692,7 @@ body {
 }
 
 .about .grades .grade-card {
-  background-color: aquamarine;
+  background-color: #ffee00;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -930,7 +930,7 @@ body {
 
 @media (max-width: 1030px) {
   .hero-shape-1 {
-    left: 15px;
+    left: 333px !important;
   }
 
   .about .about-content .section-subtitle {
@@ -1364,6 +1364,12 @@ body {
 @media (max-width: 1200px) {
   .about .about-main .about-banner {
     margin-bottom: 4rem;
+  }
+
+  .hero .hero-shape-1 {
+    width: 290px;
+    bottom: 70px;
+    left: 200px;
   }
 }
 
