@@ -627,7 +627,7 @@ body {
 
 .about .container {
   display: grid;
-  gap: 30px;
+  gap: 40px;
 }
 
 .about-banner {
