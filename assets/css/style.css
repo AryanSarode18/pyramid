@@ -6,16 +6,11 @@
  * copyright 2024 Aryan and pranav
  */
 
-
-
-
-
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
 :root {
-
   /**
    * colors
    */
@@ -42,14 +37,18 @@
    * gradient color
    */
 
-  --gradient: linear-gradient(-90deg, hsl(151, 58%, 46%) 0%, hsl(170, 75%, 41%) 100%);
+  --gradient: linear-gradient(
+    -90deg,
+    hsl(151, 58%, 46%) 0%,
+    hsl(170, 75%, 41%) 100%
+  );
 
   /**
    * typography
    */
 
-  --ff-league_spartan: 'League Spartan', sans-serif;
-  --ff-poppins: 'Poppins', sans-serif;
+  --ff-league_spartan: "League Spartan", sans-serif;
+  --ff-poppins: "Poppins", sans-serif;
 
   --fs-1: 4.2rem;
   --fs-2: 3.2rem;
@@ -94,12 +93,7 @@
   --transition-2: 0.5s ease;
   --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
   --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
-
 }
-
-
-
-
 
 /*-----------------------------------*\
   #RESET
@@ -191,10 +185,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: hsl(0, 0%, 70%);
 }
-
-
-
-
 
 /*-----------------------------------*\
   #REUSED STYLE
@@ -339,9 +329,6 @@ body {
   background-color: hsla(var(--color), 0.1);
 }
 
-
-
-
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -476,11 +463,6 @@ body {
   display: flex;
 }
 
-
-
-
-
-
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
@@ -537,14 +519,9 @@ body {
   gap: 3rem;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #BRANCHES
 \*-----------------------------------*/
-
 
 .branches .section-title {
   --color: var(--kappel);
@@ -593,8 +570,6 @@ body {
   height: 40px;
 }
 
-
-
 .branches-card .card-text {
   color: var(--eerie-black-1);
   font-size: var(--fs-5);
@@ -611,10 +586,6 @@ body {
   margin-inline: auto;
   border-radius: var(--radius-5);
 }
-
-
-
-
 
 /*-----------------------------------*\
   #ABOUT
@@ -647,7 +618,6 @@ body {
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   50%,
@@ -717,15 +687,11 @@ body {
   font-size: var(--fs-3);
 }
 
-
-
-
-
 /*-----------------------------------*\
   #RESULT
 \*-----------------------------------*/
 
-.result {
+/* .result {
   background-size: contain;
   background-position: center top;
 }
@@ -762,22 +728,72 @@ body {
   cursor: pointer;
   background-image: var(--gradient);
   transition: var(--transition-2);
+} */
+
+/*  */
+.slide-container {
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 var(--white_50);
-  }
-
-  100% {
-    box-shadow: 0 0 0 20px transparent;
-  }
+.slide-container .images {
+  height: 100%;
 }
 
+.slide-container .images img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: none;
+}
 
+.slide-container .images img.active {
+  display: block;
+}
 
+.slide-container .dots {
+  width: 120px;
+  margin: 20px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
+.slide-container .dots button {
+  height: 12px;
+  width: 20px;
+  border: 3px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.result .slide-container .btn-result {
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+}
+
+.slide-container button#prev {
+  left: -30px;
+}
+
+.slide-container button#next {
+  right: -30px;
+}
 
 /*-----------------------------------*\
   #STATS
@@ -803,10 +819,6 @@ body {
   color: var(--eerie-black-1);
   text-transform: uppercase;
 }
-
-
-
-
 
 /*-----------------------------------*\
   #FOOTER
@@ -890,10 +902,6 @@ body {
   cursor: auto;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #BACK TO TOP
 \*-----------------------------------*/
@@ -919,14 +927,9 @@ body {
   pointer-events: all;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
-
 
 @media (max-width: 1030px) {
   .hero-shape-1 {
@@ -938,15 +941,30 @@ body {
     display: flex;
   }
 
-   .about .grades .grade-card .card-title {
+  .about .grades .grade-card .card-title {
     font-size: 3rem;
   }
 
-   .about .grades .grade-card .card-text {
+  .about .grades .grade-card .card-text {
     font-size: var(--fs-4);
   }
 }
 
+@media (max-width: 500px) {
+  .hero .buttons_container {
+    flex-direction: column;
+  }
+
+  .hero .buttons_container .btn {
+    min-width: 220px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero .hero-banner .img-holder img {
+    height: 130px !important;
+  }
+}
 
 @media (max-width: 575px) {
   .footer .grid-list {
@@ -961,6 +979,18 @@ body {
   .about .grades {
     display: flex;
     flex-direction: column;
+  }
+
+  .result .slide-container .btn-result {
+    top: 290px;
+  }
+
+  .slide-container button#prev {
+    left: 160px;
+  }
+
+  .slide-container button#next {
+    right: 160px;
   }
 }
 
@@ -1011,7 +1041,6 @@ body {
 */
 
 @media (min-width: 575px) {
-
   /**
    * REUSED STYLE
    */
@@ -1038,8 +1067,6 @@ body {
     gap: 30px;
   }
 
-
-
   /**
    * HERO
    */
@@ -1048,7 +1075,6 @@ body {
     grid-template-columns: 1fr 0.9fr;
   }
 
-
   /**
    * STATS
    */
@@ -1056,8 +1082,6 @@ body {
   .stats-card {
     padding: 40px 30px;
   }
-
-
 
   /**
    * FOOTER
@@ -1072,42 +1096,30 @@ body {
   .footer .logo {
     display: flex;
     justify-content: center;
-
   }
 
   .footer .grid-list {
     text-align: center;
   }
-
-
 }
-
-
-
-
 
 /**
  * responsive for large than 768px screen
  */
 
 @media (min-width: 768px) {
-
   /**
    * CUSTOM PROPERTY
    */
 
   :root {
-
     /**
      * typography
      */
 
     --fs-1: 4.6rem;
     --fs-2: 3.8rem;
-
   }
-
-
 
   /**
    * REUSED STYLE
@@ -1120,8 +1132,6 @@ body {
   .btn {
     padding: 15px 30px;
   }
-
-
 
   /**
    * HEADER
@@ -1136,8 +1146,6 @@ body {
     padding: 10px 30px;
     margin-inline: 20px;
   }
-
-
 
   /**
    * HERO
@@ -1178,7 +1186,6 @@ body {
     position: absolute;
   }
 
-
   /**
    * ABOUT
    */
@@ -1216,35 +1223,25 @@ body {
   .newsletter-form .btn {
     padding-block: 10px;
   }
-
 }
-
-
-
-
 
 /**
  * responsive for large than 1030px screen
  */
 
 @media (min-width: 1030px) {
-
   /**
    * CUSTOM PROPERTY
    */
 
   :root {
-
     /**
      * typography
      */
 
     --fs-1: 5.5rem;
     --fs-2: 4.5rem;
-
   }
-
-
 
   /**
    * REUSED STYLE
@@ -1257,8 +1254,6 @@ body {
   .grid-list {
     grid-template-columns: repeat(2, 1fr);
   }
-
-
 
   /**
    * HERO
@@ -1284,7 +1279,6 @@ body {
     position: absolute;
   }
 
-
   /**
    * ABOUT
    */
@@ -1301,20 +1295,13 @@ body {
     max-width: 75%;
     margin-inline: auto;
   }
-
-
 }
-
-
-
-
 
 /**
  * responsive for large than 1050px screen
  */
 
 @media (min-width: 1050px) {
-
   .header-action-btn:last-child,
   .navbar .wrapper,
   .overlay {
@@ -1374,13 +1361,11 @@ body {
 }
 
 @media (min-width: 1200px) {
-
   /**
    * CUSTOM PROPERTY
    */
 
   :root {
-
     /**
      * typography
      */
@@ -1392,10 +1377,7 @@ body {
      */
 
     --section-padding: 120px;
-
   }
-
-
 
   /**
    * REUSED STYLE
@@ -1434,8 +1416,6 @@ body {
     left: -65px;
   }
 
-
-
   /**
    * ABOUT
    */
@@ -1464,8 +1444,6 @@ body {
     right: -60px;
     z-index: -1;
   }
-
-
 
   /**
    * result
