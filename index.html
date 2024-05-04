@@ -89,18 +89,10 @@
                     <li class="navbar-item">
                         <a href="#branches" class="navbar-link" data-nav-link>Branches</a>
                     </li>
-
-                    
-
-
                 </ul>
-
             </nav>
 
             <div class="header-actions">
-
-
-
                 <a href="#footer" class="btn has-before">
                     <span class="span">Contact Us</span>
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
@@ -257,8 +249,6 @@
 
 
 
-
-
             <!-- 
         - #RESULT
       -->
@@ -269,21 +259,20 @@
 
                     <p class="section-subtitle">Results</p>
 
-                    <div class="result-card">
-                        <div class="image-slider">
-                            <img src="assets/images/result1.jpg" alt="Image 1" id="slider-image">
-                            <div class="slider-btns">
-                                <button class="slide-btn prev-btn" onclick="prevImage()"><i
-                                        class="fas fa-arrow-left"></i></button>
-                                <button class="slide-btn next-btn" onclick="nextImage()"><i
-                                        class="fas fa-arrow-right"></i></button>
-                            </div>
-                            </img>
-
+                    <div class="slide-container">
+                        <div class="images">
+                            <img src="./assets/images/result2.jpg" class="active">
+                            <img src="./assets/images/result1.jpg">
+                            <img src="./assets/images/result3.jpg">
                         </div>
-
+                        <div class="dots">
+                            <button onclick="dot(1)"></button>
+                            <button onclick="dot(2)"></button>
+                            <button onclick="dot(3)"></button>
+                        </div>
+                        <button class="btn-result" id="prev" onclick="prev()"> &lt; </button>
+                        <button class="btn-result" id="next" onclick="next()"> &gt; </button>
                     </div>
-
                 </div>
             </section>
 
