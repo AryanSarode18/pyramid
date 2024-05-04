@@ -37,11 +37,9 @@
    * gradient color
    */
 
-  --gradient: linear-gradient(
-    -90deg,
-    hsl(151, 58%, 46%) 0%,
-    hsl(170, 75%, 41%) 100%
-  );
+  --gradient: linear-gradient(-90deg,
+      hsl(151, 58%, 46%) 0%,
+      hsl(170, 75%, 41%) 100%);
 
   /**
    * typography
@@ -618,6 +616,7 @@ body {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -981,16 +980,37 @@ body {
     flex-direction: column;
   }
 
-  .result .slide-container .btn-result {
-    top: 290px;
-  }
-
   .slide-container button#prev {
-    left: 160px;
+    left: 10px;
   }
 
   .slide-container button#next {
-    right: 160px;
+    right: 10px;
+  }
+
+  .result .slide-container .btn-result {
+    width: 35px;
+    height: 35px;
+  }
+
+  .result .slide-container .dots {
+    width: 80px;
+  }
+
+  .result .slide-container .dots button {
+    height: 8px;
+    width: 16px;
+    border: 2.5px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    background: transparent;
+  }
+}
+
+@media (max-width: 360px) {
+  .result .slide-container .btn-result {
+    width: 31px;
+    height: 31px;
   }
 }
 
@@ -1302,6 +1322,7 @@ body {
  */
 
 @media (min-width: 1050px) {
+
   .header-action-btn:last-child,
   .navbar .wrapper,
   .overlay {
